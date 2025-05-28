@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108"
+    tools:ignore="ResourceName">
+    <!-- Coffee cup shadow -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M30,40h48v30c0,8.28 -6.72,15 -15,15h-18c-8.28,0 -15,-6.72 -15,-15v-30z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#1B0000" />
+
+    <!-- Coffee cup -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M32,42h44v28c0,6.63 -5.37,12 -12,12h-20c-6.63,0 -12,-5.37 -12,-12v-28z" />
+
+    <!-- Coffee surface -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M32,42h44v8c0,0 -11,4 -22,4s-22,-4 -22,-4v-8z" />
+
+    <!-- Coffee highlight -->
+    <path
+        android:fillColor="#8D6E63"
+        android:fillAlpha="0.3"
+        android:pathData="M32,42l22,4 22,-4z" />
+
+    <!-- Coffee handle -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M76,48v16c0,2.21 -1.79,4 -4,4h-2c-2.21,0 -4,-1.79 -4,-4v-16h10z" />
+
+    <!-- Steam -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,25c0,-2.76 2.24,-5 5,-5s5,2.24 5,5s-2.24,5 -5,5s-5,-2.24 -5,-5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,20c0,-2.76 2.24,-5 5,-5s5,2.24 5,5s-2.24,5 -5,5s-5,-2.24 -5,-5z" />
+</vector>

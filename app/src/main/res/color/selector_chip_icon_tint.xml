@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state -->
+    <item android:state_selected="true" android:color="?attr/colorOnPrimary" />
+    <!-- Checked state (for choice chips) -->
+    <item android:state_checked="true" android:color="?attr/colorOnPrimary" />
+    <!-- Enabled state -->
+    <item android:state_enabled="true" android:color="?attr/colorOnSurface" />
+    <!-- Disabled state -->
+    <item android:color="@color/coffee_text_hint" />
+</selector>

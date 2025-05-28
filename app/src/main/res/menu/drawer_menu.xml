@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="@string/menu_cart" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_orders"
+            android:title="@string/menu_orders" />
+    </group>
+
+    <item android:title="@string/menu_account">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_person"
+                android:title="@string/menu_profile" />
+            <item
+                android:id="@+id/nav_payment"
+                android:icon="@drawable/ic_payment"
+                android:title="@string/menu_payment" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_preferences">
+        <menu>
+            <item
+                android:id="@+id/nav_notifications"
+                android:icon="@drawable/ic_notifications"
+                android:title="@string/menu_notifications" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/menu_settings" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_help">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/menu_help_center" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info"
+                android:title="@string/menu_about" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/menu_logout" />
+</menu>

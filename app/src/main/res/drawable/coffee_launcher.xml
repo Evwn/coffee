@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108"
+    tools:ignore="ResourceName">
+    <!-- Coffee cup body -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M35,45h40v30c0,10 -8,18 -20,18s-20,-8 -20,-18v-30z" />
+    
+    <!-- Coffee cup highlight -->
+    <path
+        android:fillColor="#8D6E63"
+        android:fillAlpha="0.3"
+        android:pathData="M35,45h40v20c0,0 -10,5 -20,5s-20,-5 -20,-5v-20z" />
+    
+    <!-- Coffee surface -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M35,45h40v10c0,0 -12,4 -24,4s-24,-4 -24,-4v-10z" />
+    
+    <!-- Coffee handle -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M75,48v20c0,3 -2,6 -5,6h-2c-3,0 -5,-3 -5,-6v-20h10z" />
+    
+    <!-- Coffee steam -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.5"
+        android:pathData="M50,60c0,0 -5,5 -10,10c-5,5 -10,10 -10,15c0,5 5,10 10,10c5,0 10,-5 10,-10c0,-5 -5,-10 -10,-15z" />
+    
+    <!-- Coffee beans -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M45,50c0,0 2,2 3,3c1,1 2,2 3,3c1,1 2,2 3,3c1,-1 2,-2 3,-3c1,-1 2,-2 3,-3c-1,-1 -2,-2 -3,-3c-1,-1 -2,-2 -3,-3z" />
+    
+    <!-- Coffee cup shadow -->
+    <path
+        android:fillColor="#3E2723"
+        android:fillAlpha="0.2"
+        android:pathData="M35,45h40v30c0,10 -8,18 -20,18s-20,-8 -20,-18v-30z" />
+</vector>

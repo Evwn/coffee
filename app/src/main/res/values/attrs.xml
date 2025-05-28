@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Material Components attributes -->
+    <declare-styleable name="MaterialComponents" tools:ignore="ResourceName">
+        <attr name="stateListAnimator" format="reference" />
+    </declare-styleable>
+
+    <!-- Extended FAB attributes -->
+    <declare-styleable name="ExtendedFloatingActionButton" tools:ignore="ResourceName">
+        <attr name="icon" format="reference" />
+        <attr name="iconPadding" format="dimension" />
+        <attr name="iconSize" format="dimension" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="expanded" format="boolean" />
+    </declare-styleable>
+</resources>

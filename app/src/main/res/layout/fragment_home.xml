@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffee_background"
+    tools:ignore="ExtraText,ResourceName">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/coffee_text_primary"
+            app:titleTextAppearance="@style/TextAppearance.CoffeeShop.Headline6"
+            app:menu="@menu/menu_home" />
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/search_bar"
+            style="@style/Widget.CoffeeShop.SearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/search_coffee"
+            app:tooltipText="@string/search_coffee" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="8dp">
+
+            <LinearLayout
+                android:id="@+id/categories_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Categories will be added programmatically -->
+            </LinearLayout>
+        </HorizontalScrollView>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/featured_coffees"
+                android:textAppearance="@style/TextAppearance.CoffeeShop.Headline6"
+                android:textColor="@color/coffee_text_primary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/coffee_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:padding="8dp"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_coffee" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/view_cart"
+        android:src="@drawable/ic_shopping_cart"
+        app:backgroundTint="@color/coffee_primary"
+        app:tint="@color/white"
+        app:rippleColor="@color/coffee_primary_dark"
+        app:borderWidth="0dp"
+        app:elevation="4dp"
+        app:maxImageSize="24dp"
+        app:fabCustomSize="56dp" />
+
+    <!-- Badge will be added programmatically -->
+        app:badgeTextColor="@color/white"
+        app:maxCharacterCount="2"
+        tools:badgeNumber="3" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

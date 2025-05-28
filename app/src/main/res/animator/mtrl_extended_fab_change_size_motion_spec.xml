@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionSpec xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@layout/expanded"
+        app:constraintSetStart="@layout/collapsed">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchRegionId="@+id/fab" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:layout_height="@dimen/mtrl_extended_fab_height"
+                android:layout_width="@dimen/mtrl_extended_fab_width"
+                app:framePosition="100" />
+        </KeyFrameSet>
+    </Transition>
+</MotionSpec>
