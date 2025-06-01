@@ -6,9 +6,8 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/roboto_regular"
+        android:font="@null"
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/roboto_regular"
-        tools:ignore="ResourceCycle" />
+        app:font="@null" />
 </font-family>

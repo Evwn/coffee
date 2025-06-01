@@ -24,17 +24,30 @@
             app:titleTextAppearance="@style/TextAppearance.CoffeeShop.Headline6"
             app:menu="@menu/menu_home" />
 
-        <com.google.android.material.search.SearchBar
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_bar"
-            style="@style/Widget.CoffeeShop.SearchBar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
+            android:background="@drawable/search_background"
             android:hint="@string/search_coffee"
-            app:tooltipText="@string/search_coffee" />
+            app:startIconDrawable="@drawable/ic_search"
+            app:boxBackgroundMode="none"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:focusable="true"
+                android:clickable="true" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -45,7 +58,7 @@
 
             <LinearLayout
                 android:id="@+id/categories_container"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -53,6 +66,14 @@
             </LinearLayout>
         </HorizontalScrollView>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -105,8 +126,4 @@
         app:fabCustomSize="56dp" />
 
     <!-- Badge will be added programmatically -->
-        app:badgeTextColor="@color/white"
-        app:maxCharacterCount="2"
-        tools:badgeNumber="3" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

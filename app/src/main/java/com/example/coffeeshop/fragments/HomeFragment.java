@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textfield.TextInputEditText;
 
 import com.example.coffeeshop.R;
 import com.example.coffeeshop.adapters.CoffeeAdapter;
@@ -31,6 +33,8 @@ public class HomeFragment extends Fragment {
     private CoffeeAdapter adapter;
     private List<CoffeeItem> coffeeItems;
     private SharedViewModel sharedViewModel;
+    private TextInputLayout searchBar;
+    private NavController navController;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -43,6 +47,16 @@ public class HomeFragment extends Fragment {
         
         // Initialize ViewModel
         sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        
+        // Initialize SearchBar
+        searchBar = view.findViewById(R.id.search_bar);
+        TextInputEditText searchEditText = (TextInputEditText) searchBar.getEditText();
+        if (searchEditText != null) {
+            searchEditText.setOnClickListener(v -> {
+                // Handle search bar click
+                Toast.makeText(requireContext(), "Search clicked", Toast.LENGTH_SHORT).show();
+            });
+        }
         
         // Initialize RecyclerView
         recyclerView = view.findViewById(R.id.coffee_recycler_view);
@@ -90,13 +104,10 @@ public class HomeFragment extends Fragment {
         coffeeItems.add(new CoffeeItem("Macchiato", "Espresso with a dash of milk", 3.25, R.drawable.coffee_macchiato));
     }
 
-
-    
-    private NavController navController;
-    
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        // Initialize NavController using the fragment's view
         navController = Navigation.findNavController(view);
     }
     
