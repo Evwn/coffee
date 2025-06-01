@@ -19,6 +19,11 @@ import java.util.List;
 import java.util.Locale;
 
 public class OrdersAdapter extends ListAdapter<Order, OrdersAdapter.OrderViewHolder> {
+    public interface OnItemClickListener {
+        void onItemClick(Order order);
+    }
+    
+    private OnItemClickListener listener;
     private static final DiffUtil.ItemCallback<Order> DIFF_CALLBACK = new DiffUtil.ItemCallback<Order>() {
         @Override
         public boolean areItemsTheSame(@NonNull Order oldItem, @NonNull Order newItem) {
@@ -35,6 +40,10 @@ public class OrdersAdapter extends ListAdapter<Order, OrdersAdapter.OrderViewHol
 
     public OrdersAdapter() {
         super(DIFF_CALLBACK);
+    }
+    
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -59,19 +68,19 @@ public class OrdersAdapter extends ListAdapter<Order, OrdersAdapter.OrderViewHol
         int statusColor;
         switch (order.getStatus().toLowerCase()) {
             case "completed":
-                statusColor = holder.itemView.getContext().getColor(R.color.green_500);
+                statusColor = holder.itemView.getContext().getColor(R.color.coffeeshop_green_500);
                 break;
             case "confirmed":
-                statusColor = holder.itemView.getContext().getColor(R.color.blue_500);
+                statusColor = holder.itemView.getContext().getColor(R.color.coffeeshop_blue_500);
                 break;
             case "processing":
-                statusColor = holder.itemView.getContext().getColor(R.color.orange_500);
+                statusColor = holder.itemView.getContext().getColor(R.color.coffeeshop_orange_500);
                 break;
             case "cancelled":
-                statusColor = holder.itemView.getContext().getColor(R.color.red_500);
+                statusColor = holder.itemView.getContext().getColor(R.color.coffeeshop_red_500);
                 break;
             default:
-                statusColor = holder.itemView.getContext().getColor(R.color.gray_500);
+                statusColor = holder.itemView.getContext().getColor(R.color.coffeeshop_gray_500);
         }
         holder.statusText.setTextColor(statusColor);
         
@@ -107,14 +116,19 @@ public class OrdersAdapter extends ListAdapter<Order, OrdersAdapter.OrderViewHol
                             ViewGroup.LayoutParams.MATCH_PARENT,
                             (int) (1 * holder.itemView.getContext().getResources().getDisplayMetrics().density)
                     ));
-                    divider.setBackgroundColor(holder.itemView.getContext().getColor(R.color.gray_200));
+                    divider.setBackgroundColor(holder.itemView.getContext().getColor(R.color.coffeeshop_gray_200));
                     holder.orderItemsLayout.addView(divider);
                 }
             }
         }
         
-        // Toggle expand/collapse
+        // Toggle expand/collapse on the entire item
         holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(order);
+            }
+            
+            // Toggle expand/collapse
             order.setExpanded(!order.isExpanded());
             notifyItemChanged(position);
         });

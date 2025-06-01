@@ -4,7 +4,7 @@
         <shape android:shape="rectangle">
             <corners android:radius="4dp" />
             <size android:height="4dp" />
-            <solid android:color="@color/coffee_outline" />
+            <solid android:color="@color/coffeeshop_coffee_outline" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
@@ -12,7 +12,7 @@
             <shape android:shape="rectangle">
                 <corners android:radius="4dp" />
                 <size android:height="4dp" />
-                <solid android:color="@color/coffee_primary" />
+                <solid android:color="@color/coffeeshop_coffee_primary" />
             </shape>
         </clip>
     </item>

@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/coffee_placeholder"
+            android:src="@drawable/coffeeshop_coffee_placeholder"
             android:contentDescription="@string/coffee_image" />
 
         <LinearLayout
@@ -35,7 +35,7 @@
                 android:id="@+id/coffee_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/coffee_text_primary"
+                android:textColor="@color/coffeeshop_coffee_text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:maxLines="1"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/coffee_text_secondary"
+                android:textColor="@color/coffeeshop_coffee_text_secondary"
                 android:textSize="12sp"
                 android:maxLines="2"
                 android:ellipsize="end"
@@ -65,7 +65,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@color/coffee_primary"
+                    android:textColor="@color/coffeeshop_coffee_primary"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:text="$3.50" />
@@ -79,13 +79,13 @@
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
                     android:text="@string/add"
-                    android:textColor="@color/coffee_primary"
-                    app:icon="@drawable/ic_add"
+                    android:textColor="@color/coffeeshop_coffee_primary"
+                    app:icon="@drawable/coffeeshop_ic_add"
                     app:iconGravity="textStart"
                     app:iconPadding="0dp"
-                    app:iconTint="@color/coffee_primary"
-                    app:rippleColor="@color/coffee_primary_light"
-                    app:strokeColor="@color/coffee_primary"
+                    app:iconTint="@color/coffeeshop_coffee_primary"
+                    app:rippleColor="@color/coffeeshop_coffee_primary_light"
+                    app:strokeColor="@color/coffeeshop_coffee_primary"
                     app:strokeWidth="1dp" />
             </LinearLayout>
         </LinearLayout>

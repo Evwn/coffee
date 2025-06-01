@@ -7,6 +7,6 @@
     android:viewportHeight="24"
     tools:ignore="ResourceName">
     <path
-        android:fillColor="@color/coffee_text_primary"
-        android:pathData="M17,7L12,2 7,7 2,7v4h5v10h2v-10h5v-4zM14,17h4v-2h-4v2zM16,11h2v4h-2v-4z"/>
+        android:fillColor="@color/coffeeshop_coffee_text_primary"
+        android:pathData="M16.59,8.59L12,13.17 7.41,8.59 6,10l6,6 6,-6z"/>
 </vector>

@@ -1,85 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Primary brand colors -->
-    <color name="coffee_primary">#6F4E37</color>
-    <color name="coffee_primary_dark">#5A3E2C</color>
-    <color name="coffee_primary_light">#8B6B4A</color>
-    <color name="coffee_primary_10">#1A6F4E37</color>
-    <color name="white_20">#33FFFFFF</color>
-    <color name="white_70">#B3FFFFFF</color>
+    <color name="coffeeshop_coffee_primary">#6F4E37</color>
+    <color name="coffeeshop_coffee_primary_dark">#5A3E2C</color>
+    <color name="coffeeshop_coffee_primary_light">#8B6B4A</color>
+    <color name="coffeeshop_coffee_primary_10">#1A6F4E37</color>
+    <color name="coffeeshop_white_20">#33FFFFFF</color>
+    <color name="coffeeshop_white_70">#B3FFFFFF</color>
     
     <!-- Secondary colors -->
-    <color name="coffee_secondary">#D4A76A</color>
-    <color name="coffee_secondary_light">#E8C39E</color>
-    <color name="coffee_secondary_dark">#B38C5A</color>
+    <color name="coffeeshop_coffee_secondary">#D4A76A</color>
+    <color name="coffeeshop_coffee_secondary_light">#E8C39E</color>
+    <color name="coffeeshop_coffee_secondary_dark">#B38C5A</color>
+    
+    <!-- Material 3 specific colors -->
+    <color name="coffeeshop_md_theme_light_primary">@color/coffeeshop_coffee_primary</color>
+    <color name="coffeeshop_md_theme_light_onPrimary">@color/coffeeshop_white</color>
+    <color name="coffeeshop_md_theme_light_primaryContainer">@color/coffeeshop_coffee_primary_light</color>
+    <color name="coffeeshop_md_theme_light_onPrimaryContainer">@color/coffeeshop_coffee_primary_dark</color>
+    <color name="coffeeshop_md_theme_light_secondary">@color/coffeeshop_coffee_secondary</color>
+    <color name="coffeeshop_md_theme_light_onSecondary">@color/coffeeshop_white</color>
+    <color name="coffeeshop_md_theme_light_secondaryContainer">@color/coffeeshop_coffee_secondary_light</color>
+    <color name="coffeeshop_md_theme_light_onSecondaryContainer">@color/coffeeshop_coffee_secondary_dark</color>
+    <color name="coffeeshop_md_theme_light_surface">@color/coffeeshop_coffee_surface</color>
+    <color name="coffeeshop_md_theme_light_onSurface">@color/coffeeshop_coffee_text_primary</color>
+    <color name="coffeeshop_md_theme_light_surfaceVariant">@color/coffeeshop_coffee_surface</color>
+    <color name="coffeeshop_md_theme_light_onSurfaceVariant">@color/coffeeshop_coffee_text_secondary</color>
+    
+    <!-- Dark theme colors -->
+    <color name="coffeeshop_md_theme_dark_primary">@color/coffeeshop_coffee_secondary</color>
+    <color name="coffeeshop_md_theme_dark_onPrimary">@color/coffeeshop_white</color>
+    <color name="coffeeshop_md_theme_dark_primaryContainer">@color/coffeeshop_coffee_primary_dark</color>
+    <color name="coffeeshop_md_theme_dark_onPrimaryContainer">@color/coffeeshop_coffee_primary_light</color>
+    <color name="coffeeshop_md_theme_dark_secondary">@color/coffeeshop_coffee_secondary_light</color>
+    <color name="coffeeshop_md_theme_dark_onSecondary">@color/coffeeshop_coffee_primary_dark</color>
+    <color name="coffeeshop_md_theme_dark_secondaryContainer">@color/coffeeshop_coffee_secondary_dark</color>
+    <color name="coffeeshop_md_theme_dark_onSecondaryContainer">@color/coffeeshop_coffee_secondary_light</color>
+    <color name="coffeeshop_md_theme_dark_surface">@color/coffeeshop_coffee_primary_dark</color>
+    <color name="coffeeshop_md_theme_dark_onSurface">@color/coffeeshop_white</color>
+    <color name="coffeeshop_md_theme_dark_surfaceVariant">@color/coffeeshop_coffee_primary_dark</color>
+    <color name="coffeeshop_md_theme_dark_onSurfaceVariant">@color/coffeeshop_coffee_secondary_light</color>
     
     <!-- Background colors -->
-    <color name="coffee_background">#FFF9F5F0</color>
-    <color name="coffee_surface">#FFFFFFFF</color>
-    <color name="coffee_card_background">#FFFFFFFF</color>
+    <color name="coffeeshop_coffee_background">#FFF9F5F0</color>
+    <color name="coffeeshop_coffee_surface">#FFFFFFFF</color>
+    <color name="coffeeshop_coffee_card_background">#FFFFFFFF</color>
     
     <!-- Text colors -->
-    <color name="coffee_text_primary">#212121</color>
-    <color name="coffee_text_secondary">#757575</color>
-    <color name="coffee_text_hint">#BDBDBD</color>
-    <color name="coffee_text_white">#FFFFFF</color>
+    <color name="coffeeshop_coffee_text_primary">#212121</color>
+    <color name="coffeeshop_coffee_text_secondary">#757575</color>
+    <color name="coffeeshop_coffee_text_hint">#BDBDBD</color>
+    <color name="coffeeshop_coffee_text_white">#FFFFFF</color>
     
     <!-- Divider color -->
-    <color name="coffee_divider">#E0E0E0</color>
+    <color name="coffeeshop_coffee_divider">#E0E0E0</color>
     
     <!-- Material 3 default colors -->
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="coffeeshop_purple_200">#FFBB86FC</color>
+    <color name="coffeeshop_purple_500">#FF6200EE</color>
+    <color name="coffeeshop_purple_700">#FF3700B3</color>
+    <color name="coffeeshop_teal_200">#FF03DAC5</color>
+    <color name="coffeeshop_teal_700">#FF018786</color>
     
     <!-- Status colors -->
-    <color name="status_success">#4CAF50</color>
-    <color name="status_warning">#FFC107</color>
-    <color name="status_error">#F44336</color>
+    <color name="coffeeshop_status_success">#4CAF50</color>
+    <color name="coffeeshop_status_warning">#FFC107</color>
+    <color name="coffeeshop_status_error">#F44336</color>
     
     <!-- Material Design colors -->
-    <color name="red_100">#FFCDD2</color>
-    <color name="red_500">#F44336</color>
-    <color name="green_100">#C8E6C9</color>
-    <color name="green_500">#4CAF50</color>
-    <color name="blue_100">#BBDEFB</color>
-    <color name="blue_500">#2196F3</color>
-    <color name="yellow_100">#FFF9C4</color>
-    <color name="yellow_500">#FFEB3B</color>
-    <color name="orange_100">#FFE0B2</color>
-    <color name="orange_500">#FF9800</color>
-    <color name="brown_100">#D7CCC8</color>
-    <color name="brown_500">#795548</color>
-    <color name="gray_100">#F5F5F5</color>
-    <color name="gray_200">#EEEEEE</color>
-    <color name="gray_300">#E0E0E0</color>
-    <color name="gray_400">#BDBDBD</color>
-    <color name="gray_500">#9E9E9E</color>
+    <color name="coffeeshop_red_100">#FFCDD2</color>
+    <color name="coffeeshop_red_500">#F44336</color>
+    <color name="coffeeshop_green_100">#C8E6C9</color>
+    <color name="coffeeshop_green_500">#4CAF50</color>
+    <color name="coffeeshop_blue_100">#BBDEFB</color>
+    <color name="coffeeshop_blue_500">#2196F3</color>
+    <color name="coffeeshop_yellow_100">#FFF9C4</color>
+    <color name="coffeeshop_yellow_500">#FFEB3B</color>
+    <color name="coffeeshop_orange_100">#FFE0B2</color>
+    <color name="coffeeshop_orange_500">#FF9800</color>
+    <color name="coffeeshop_brown_100">#D7CCC8</color>
+    <color name="coffeeshop_brown_500">#795548</color>
+    <color name="coffeeshop_gray_100">#F5F5F5</color>
+    <color name="coffeeshop_gray_200">#EEEEEE</color>
+    <color name="coffeeshop_gray_300">#E0E0E0</color>
+    <color name="coffeeshop_gray_400">#BDBDBD</color>
+    <color name="coffeeshop_gray_500">#9E9E9E</color>
     
     <!-- Light gray for coffee items -->
-    <color name="coffee_light_gray">#F5F5F5</color>
-    <color name="gray_600">#757575</color>
-    <color name="gray_700">#616161</color>
-    <color name="gray_800">#424242</color>
-    <color name="gray_900">#212121</color>
+    <color name="coffeeshop_coffee_light_gray">#F5F5F5</color>
+    <color name="coffeeshop_gray_600">#757575</color>
+    <color name="coffeeshop_gray_700">#616161</color>
+    <color name="coffeeshop_gray_800">#424242</color>
+    <color name="coffeeshop_gray_900">#212121</color>
     
     <!-- Black and white -->
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="coffeeshop_black">#FF000000</color>
+    <color name="coffeeshop_white">#FFFFFFFF</color>
     
     <!-- Transparent -->
-    <color name="transparent">#00000000</color>
+    <color name="coffeeshop_transparent">#00000000</color>
     
     <!-- Progress bar colors -->
-    <color name="coffee_progress_track">#E0E0E0</color>
-    <color name="coffee_primary_20">#336F4E37</color>
-    <color name="white_10">#1AFFFFFF</color>
-    <color name="coffee_outline">#BDBDBD</color>
-    <color name="coffee_error">@color/status_error</color>
+    <color name="coffeeshop_coffee_progress_track">#E0E0E0</color>
+    <color name="coffeeshop_coffee_primary_20">#336F4E37</color>
+    <color name="coffeeshop_white_10">#1AFFFFFF</color>
+    <color name="coffeeshop_coffee_outline">#BDBDBD</color>
+    <color name="coffeeshop_coffee_error">@color/coffeeshop_status_error</color>
     
     <!-- Chip colors -->
-    <color name="selector_chip_background">#F1F3F4</color>
-    <color name="selector_chip_stroke">#E0E0E0</color>
+    <color name="coffeeshop_selector_chip_background">#F1F3F4</color>
+    <color name="coffeeshop_selector_chip_stroke">#E0E0E0</color>
 </resources>

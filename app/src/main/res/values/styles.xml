@@ -1,482 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- SearchBar style -->
-    <style name="Widget.CoffeeShop.SearchBar" parent="@style/Widget.Material3.SearchBar">
-        <item name="android:backgroundTint">@color/coffee_surface</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="android:textColorHint">@color/coffee_text_secondary</item>
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.CoffeeShop.LargeComponent</item>
-        <item name="elevation">0dp</item>
-        <item name="hintTextColor">?attr/colorOnSurfaceVariant</item>
-        <item name="android:padding">8dp</item>
-    </style>
-
-    <!-- Widget styles -->
-    <style name="ThemeOverlay.CoffeeShop" parent="ThemeOverlay.Material3">
-        <item name="colorPrimary">@color/coffee_primary</item>
-        <item name="colorSecondary">@color/coffee_secondary</item>
-    </style>
-
-    <!-- Base application theme with Material Components bridge -->
-    <style name="ThemeOverlay.CoffeeShop.MaterialComponents" parent="">
-        <item name="colorPrimary">@color/coffee_primary</item>
-        <item name="colorPrimaryDark">@color/coffee_primary_dark</item>
-        <item name="colorPrimaryVariant">@color/coffee_primary_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/coffee_secondary</item>
-        <item name="colorSecondaryVariant">@color/coffee_secondary_dark</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="android:windowBackground">@color/coffee_background</item>
-        <item name="colorSurface">@color/coffee_surface</item>
-        <item name="colorOnSurface">@color/coffee_text_primary</item>
-    </style>
-    <!-- Text Styles -->
-    <style name="TextAppearance.CoffeeShop.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:textSize">96sp</item>
-        <item name="android:letterSpacing">-1.5</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
-        <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:textSize">60sp</item>
-        <item name="android:letterSpacing">-0.5</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">48sp</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">34sp</item>
-        <item name="android:letterSpacing">0.25</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Text Appearance Styles -->
     <style name="TextAppearance.CoffeeShop.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:letterSpacing">0.15</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">0.15</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:letterSpacing">0.1</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">0.5</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Body2" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:letterSpacing">0.25</item>
-        <item name="android:textColor">@color/coffee_text_secondary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Caption" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">0.4</item>
-        <item name="android:textColor">@color/coffee_text_secondary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Overline" parent="TextAppearance.MaterialComponents.Overline">
-        <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:letterSpacing">1.5</item>
-        <item name="android:textColor">@color/coffee_text_secondary</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:letterSpacing">1.25</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-
-    <!-- Widget Styles -->
-    <style name="Widget.CoffeeShop.Button" parent="Widget.MaterialComponents.Button">
-        <item name="android:textAppearance">@style/TextAppearance.CoffeeShop.Button</item>
-        <item name="backgroundTint">@color/coffee_primary</item>
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
-        <item name="android:paddingStart">24dp</item>
-        <item name="android:paddingEnd">24dp</item>
-        <item name="cornerRadius">8dp</item>
-        <item name="android:stateListAnimator">@null</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textAppearance">@style/TextAppearance.CoffeeShop.Button</item>
-        <item name="strokeColor">@color/coffee_primary</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="android:textColor">@color/coffee_primary</item>
-        <item name="backgroundTint">@android:color/transparent</item>
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
-        <item name="android:paddingStart">24dp</item>
-        <item name="android:paddingEnd">24dp</item>
-        <item name="cornerRadius">8dp</item>
-        <item name="android:stateListAnimator">@null</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textAppearance">@style/TextAppearance.CoffeeShop.Button</item>
-        <item name="android:textColor">@color/coffee_primary</item>
-        <item name="backgroundTint">@android:color/transparent</item>
-        <item name="rippleColor">@color/coffee_primary_10</item>
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
-        <item name="android:paddingStart">12dp</item>
-        <item name="android:paddingEnd">12dp</item>
-        <item name="cornerRadius">8dp</item>
-        <item name="android:stateListAnimator">@null</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">@color/coffee_surface</item>
-        <item name="cardElevation">4dp</item>
-        <item name="cardMaxElevation">8dp</item>
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardPreventCornerOverlap">true</item>
-        <item name="cardUseCompatPadding">true</item>
-        <item name="contentPadding">16dp</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
-        <item name="titleTextAppearance">@style/TextAppearance.CoffeeShop.Headline6</item>
-        <item name="subtitleTextAppearance">@style/TextAppearance.CoffeeShop.Body2</item>
-        <item name="android:background">@color/coffee_primary</item>
-        <item name="titleTextColor">@color/white</item>
-        <item name="subtitleTextColor">@color/white</item>
-        <item name="navigationIconTint">@color/white</item>
-        <item name="popupTheme">@style/ThemeOverlay.CoffeeShop.PopupMenu</item>
-        <item name="theme">@style/ThemeOverlay.CoffeeShop.Toolbar</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="itemIconTint">@color/coffeeshop_bottom_nav_item_color</item>
-        <item name="itemTextAppearanceActive">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="itemTextAppearanceInactive">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="itemTextColor">@color/coffeeshop_bottom_nav_item_color</item>
-        <item name="itemBackground">@color/coffee_surface</item>
-        <item name="itemIconSize">24dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@color/coffee_surface</item>
-        <item name="elevation">8dp</item>
-    </style>
-    
-    <style name="Widget.CoffeeShop.NavigationView" parent="Widget.MaterialComponents.NavigationView">
-        <item name="itemIconTint">@color/coffeeshop_bottom_nav_item_color</item>
-        <item name="itemTextAppearance">@style/TextAppearance.CoffeeShop.Subtitle1</item>
-        <item name="itemTextColor">@color/coffee_text_primary</item>
-        <item name="itemBackground">@color/coffee_surface</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="elevation">8dp</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.FloatingActionButton" parent="Widget.Material3.FloatingActionButton">
-        <item name="backgroundTint">@color/coffee_primary</item>
-        <item name="tint">@color/white</item>
-        <item name="elevation">6dp</item>
-        <item name="pressedTranslationZ">12dp</item>
-        <item name="borderWidth">0dp</item>
-        <item name="rippleColor">@color/white_20</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.ExtendedFloatingActionButton" parent="Widget.Material3.ExtendedFloatingActionButton">
-        <item name="backgroundTint">@color/coffee_primary</item>
-        <item name="iconTint">@color/white</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="elevation">6dp</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.CoffeeShop.MediumComponent</item>
-        <item name="rippleColor">@color/white_20</item>
-        <item name="stateListAnimator">@animator/mtrl_extended_fab_change_size_motion_spec</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/coffee_primary</item>
-        <item name="boxStrokeWidth">1dp</item>
-        <item name="boxStrokeWidthFocused">2dp</item>
-        <item name="boxCornerRadiusTopStart">8dp</item>
-        <item name="boxCornerRadiusTopEnd">8dp</item>
-        <item name="boxCornerRadiusBottomStart">8dp</item>
-        <item name="boxCornerRadiusBottomEnd">8dp</item>
-        <item name="hintTextAppearance">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="errorTextAppearance">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="errorTextColor">@color/status_error</item>
-        <item name="counterTextAppearance">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="counterOverflowTextAppearance">@style/TextAppearance.CoffeeShop.Caption</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
-        <item name="chipBackgroundColor">@color/coffee_surface</item>
-        <item name="chipStrokeColor">@color/coffee_divider</item>
-        <item name="chipStrokeWidth">1dp</item>
-        <item name="chipMinHeight">32dp</item>
-        <item name="chipStartPadding">12dp</item>
-        <item name="chipEndPadding">12dp</item>
-        <item name="closeIconSize">18dp</item>
-        <item name="closeIconTint">@color/coffee_text_secondary</item>
-        <item name="android:textAppearance">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="rippleColor">@color/coffee_primary_10</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.ProgressBar" parent="Widget.MaterialComponents.ProgressIndicator">
-        <item name="trackThickness">4dp</item>
-        <item name="trackColor">@color/coffee_progress_track</item>
-        <item name="indicatorColor">@color/coffee_primary</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.EditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/coffee_outline</item>
-        <item name="boxStrokeWidth">1dp</item>
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.CoffeeShop.SmallComponent</item>
-        <item name="android:textColorHint">@color/coffee_text_hint</item>
-        <item name="hintTextColor">@color/coffee_text_hint</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingStart">12dp</item>
-        <item name="android:paddingEnd">12dp</item>
-    </style>
-    
-    <style name="ShapeAppearance.CoffeeShop.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">4dp</item>
-    </style>
-
-
-
-    <style name="Widget.CoffeeShop.Chip" parent="Widget.MaterialComponents.Chip.Entry">
-        <item name="chipBackgroundColor">@color/coffee_surface</item>
-        <item name="chipStrokeColor">@color/coffee_divider</item>
-        <item name="chipStrokeWidth">1dp</item>
-        <item name="chipMinHeight">32dp</item>
-        <item name="chipStartPadding">12dp</item>
-        <item name="chipEndPadding">12dp</item>
-        <item name="closeIconSize">18dp</item>
-        <item name="closeIconTint">@color/coffee_text_secondary</item>
-        <item name="android:textAppearance">@style/TextAppearance.CoffeeShop.Caption</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="rippleColor">@color/coffee_primary_10</item>
-    </style>
-
-    <!-- Theme Overlays -->
-    <style name="ThemeOverlay.CoffeeShop.Toolbar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
-        <item name="colorPrimary">@color/coffee_primary</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondary">@color/white_70</item>
-    </style>
-
-    <style name="ThemeOverlay.CoffeeShop.PopupMenu" parent="ThemeOverlay.MaterialComponents.Light">
-        <item name="android:colorBackground">@color/coffee_surface</item>
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="android:popupBackground">@drawable/coffeeshop_bg_popup_menu</item>
-        <item name="android:dropDownVerticalOffset">4dp</item>
-        <item name="android:dropDownHorizontalOffset">-4dp</item>
-        <item name="listPreferredItemHeightSmall">40dp</item>
-        <item name="android:listDivider">@drawable/divider_popup_menu</item>
-    </style>
-
-    <style name="ShapeAppearance.CoffeeSheet.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">16dp</item>
-        <item name="cornerSizeTopLeft">16dp</item>
-        <item name="cornerSizeTopRight">16dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
-        <item name="cornerSizeBottomRight">0dp</item>
-    </style>
-
-    <style name="Widget.CoffeeShop.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal" tools:ignore="ResourceName">
-        <item name="shapeAppearance">@style/ShapeAppearance.CoffeeSheet.LargeComponent</item>
-        <item name="backgroundTint">@color/white</item>
-    </style>
-
-    <style name="ThemeOverlay.CoffeeShop.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog" tools:ignore="ResourceName">
-        <item name="bottomSheetStyle">@style/Widget.CoffeeShop.BottomSheet.Modal</item>
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:statusBarColor">#61000000</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-    </style>
-
-    <style name="ThemeOverlay.CoffeeShop.DarkActionBar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" tools:ignore="ResourceName">
-        <item name="colorPrimary">@color/coffee_primary</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondary">@color/white_70</item>
-    </style>
-
-    <style name="ThemeOverlay.CoffeeShop.LightActionBar" parent="ThemeOverlay.MaterialComponents.Light">
-        <item name="colorPrimary">@color/coffee_primary</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textColorPrimary">@color/coffee_text_primary</item>
-        <item name="android:textColorSecondary">@color/coffee_text_secondary</item>
-    </style>
-
-    <!-- AppBar Layout -->
-    <style name="Widget.CoffeeShop.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.PrimarySurface">
-        <item name="elevation">0dp</item>
-        <item name="android:background">@color/coffee_primary</item>
-        <item name="android:theme">@style/ThemeOverlay.CoffeeShop.Toolbar</item>
-    </style>
-
-    <!-- Tab Layout -->
-    <style name="Widget.CoffeeShop.TabLayout" parent="Widget.MaterialComponents.TabLayout">
-        <item name="tabIndicatorColor">@color/white</item>
-        <item name="tabIndicatorHeight">2dp</item>
-        <item name="tabTextAppearance">@style/TextAppearance.CoffeeShop.Tab</item>
-        <item name="tabTextColor">@color/white_70</item>
-        <item name="tabSelectedTextColor">@color/white</item>
-        <item name="tabRippleColor">@color/white_10</item>
-        <item name="tabGravity">fill</item>
-        <item name="tabMode">fixed</item>
-    </style>
-
-    <style name="TextAppearance.CoffeeShop.Tab" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:letterSpacing">0.5</item>
-    </style>
-
-    <!-- Switch -->
-    <style name="Widget.CoffeeShop.CompoundButton.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
-        <item name="useMaterialThemeColors">true</item>
-        <item name="thumbTint">@color/selector_switch_thumb</item>
-        <item name="trackTint">@color/selector_switch_track</item>
-    </style>
-
-    <!-- CheckBox -->
-    <style name="Widget.CoffeeShop.CompoundButton.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/selector_checkbox</item>
-        <item name="useMaterialThemeColors">true</item>
-    </style>
-
-    <!-- RadioButton -->
-    <style name="Widget.CoffeeShop.CompoundButton.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/selector_radio_button</item>
-        <item name="useMaterialThemeColors">true</item>
+        <item name="android:textColor">@color/coffeeshop_coffee_text_primary</item>
     </style>
 
     <!-- Shape Appearance Styles -->
     <style name="ShapeAppearanceOverlay.CoffeeShop.RoundedCornerSmall" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">8dp</item>
+        <item name="cornerSize">4dp</item>
     </style>
 
-    <!-- Material3 SearchBar style -->
-    <style name="Widget.Material3.SearchBar.OutlinedBox" parent="Widget.Material3.SearchBar">
-        <item name="shapeAppearance">@style/ShapeAppearance.CoffeeShop.LargeComponent</item>
-        <item name="strokeColor">@color/coffee_primary</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="boxStrokeWidth">0dp</item>
-        <item name="boxStrokeColor">@android:color/transparent</item>
+    <!-- Button Styles -->
+    <style name="Widget.CoffeeShop.Button" parent="Widget.MaterialComponents.Button" tools:ignore="ResourceName">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="backgroundTint">@color/coffeeshop_coffee_primary</item>
+        <item name="android:textColor">@color/coffeeshop_white</item>
+        <item name="cornerRadius">@dimen/coffeeshop_button_corner_radius</item>
+        <item name="android:paddingStart">@dimen/coffeeshop_button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/coffeeshop_button_padding_horizontal</item>
+        <item name="android:minHeight">@dimen/coffeeshop_button_min_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
     </style>
 
-    <!-- Shape Appearance for large components -->
-    <style name="ShapeAppearance.CoffeeShop.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">28dp</item>
+    <style name="Widget.CoffeeShop.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/coffeeshop_coffee_primary</item>
+        <item name="rippleColor">@color/coffeeshop_coffee_primary_10</item>
+        <item name="android:minHeight">@dimen/coffeeshop_button_min_height</item>
+        <item name="android:paddingStart">@dimen/coffeeshop_button_text_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/coffeeshop_button_text_padding_horizontal</item>
     </style>
 
-    <!-- ShapeAppearanceOverlay for SearchBar -->
-    <style name="ShapeAppearanceOverlay.CoffeeShop.LargeComponent" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">28dp</item>
+    <style name="Widget.CoffeeShop.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton" tools:ignore="ResourceName">
+        <item name="strokeColor">@color/coffeeshop_coffee_primary</item>
+        <item name="strokeWidth">@dimen/coffeeshop_button_stroke_width</item>
+        <item name="android:textColor">@color/coffeeshop_coffee_primary</item>
+        <item name="rippleColor">@color/coffeeshop_coffee_primary_10</item>
+        <item name="cornerRadius">@dimen/coffeeshop_button_corner_radius</item>
+        <item name="android:minHeight">@dimen/coffeeshop_button_min_height</item>
+        <item name="android:paddingStart">@dimen/coffeeshop_button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/coffeeshop_button_padding_horizontal</item>
     </style>
 
-
-
-    <!-- Text Button Style (Base) -->
-    <style name="Widget.CoffeeShop.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/coffee_primary</item>
-        <item name="rippleColor">@color/coffee_primary_10</item>
-        <item name="android:paddingStart">12dp</item>
-        <item name="android:paddingEnd">12dp</item>
-        <item name="android:minWidth">64dp</item>
-        <item name="android:minHeight">36dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.5</item>
-        <item name="android:textSize">14sp</item>
-        <item name="fontFamily">@font/roboto_medium</item>
+    <!-- CardView -->
+    <style name="Widget.CoffeeShop.CardView" parent="Widget.MaterialComponents.CardView" tools:ignore="ResourceName">
+        <item name="cardBackgroundColor">@color/coffeeshop_coffee_surface</item>
+        <item name="cardElevation">@dimen/coffeeshop_card_elevation</item>
+        <item name="cardCornerRadius">@dimen/coffeeshop_card_corner_radius</item>
+        <item name="contentPadding">@dimen/coffeeshop_card_content_padding</item>
+        <item name="cardMaxElevation">@dimen/coffeeshop_card_max_elevation</item>
     </style>
 
-    <!-- Positive Action Button -->
-    <style name="Widget.CoffeeShop.Button.TextButton.Positive" parent="Widget.CoffeeShop.Button.TextButton">
-        <item name="android:textColor">@color/coffee_primary</item>
+    <!-- Floating Action Button -->
+    <style name="Widget.CoffeeShop.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton" tools:ignore="ResourceName">
+        <item name="backgroundTint">@color/coffeeshop_coffee_primary</item>
+        <item name="android:tint">@color/coffeeshop_white</item>
+        <item name="fabSize">normal</item>
+        <item name="elevation">@dimen/coffeeshop_fab_elevation</item>
+        <item name="android:padding">@dimen/coffeeshop_fab_padding</item>
     </style>
-
-
-
-
-    <!-- Material 3 Shape Appearance -->
-    <style name="ShapeAppearance.CoffeeShop.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">16dp</item>
-    </style>
-
-    <!-- Base Widget Style -->
-    <style name="Widget.CoffeeShop" parent="Widget.MaterialComponents" tools:ignore="ResourceName">
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:letterSpacing">0.02</item>
-    </style>
-
-    <!-- Base Widget Style for MaterialComponents -->
-    <style name="Widget.MaterialComponents" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">@color/coffee_text_primary</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:letterSpacing">0.02</item>
-    </style>
-
-    <!-- Material SeekBar Style -->
-    <style name="Widget.CoffeeShop.SeekBar">
-        <item name="android:thumbTint">@color/coffee_primary</item>
-        <item name="android:progressTint">@color/coffee_primary</item>
-        <item name="android:progressBackgroundTint">@color/coffee_outline</item>
-        <item name="android:minHeight">24dp</item>
-        <item name="android:thumb">@drawable/seekbar_thumb</item>
-        <item name="android:progressDrawable">@drawable/seekbar_progress</item>
-    </style>
-
-    <!-- Negative Action Button -->
-    <style name="Widget.CoffeeShop.Button.TextButton.Negative" parent="Widget.CoffeeShop.Button.TextButton">
-        <item name="android:textColor">@color/coffee_error</item>
+    
+    <!-- Extended Floating Action Button -->
+    <style name="Widget.CoffeeShop.ExtendedFloatingActionButton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton" tools:ignore="ResourceName">
+        <item name="backgroundTint">@color/coffeeshop_coffee_primary</item>
+        <item name="android:textColor">@color/coffeeshop_white</item>
+        <item name="iconTint">@color/coffeeshop_white</item>
+        <item name="cornerRadius">@dimen/coffeeshop_button_corner_radius</item>
+        <item name="elevation">@dimen/coffeeshop_fab_elevation</item>
+        <item name="android:minHeight">@dimen/coffeeshop_button_min_height</item>
+        <item name="android:paddingStart">@dimen/coffeeshop_button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/coffeeshop_button_padding_horizontal</item>
     </style>
 </resources>

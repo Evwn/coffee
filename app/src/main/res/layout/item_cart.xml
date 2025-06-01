@@ -22,9 +22,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/coffee_placeholder"
+            android:src="@drawable/coffeeshop_coffee_placeholder"
             android:contentDescription="@string/coffee_image"
-            android:background="@color/coffee_light_gray"
+            android:background="@color/coffeeshop_coffee_light_gray"
             android:padding="4dp"
             android:clipToPadding="false"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CoffeeShop.RoundedCornerSmall" />
@@ -40,7 +40,7 @@
                 android:id="@+id/coffee_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/coffee_text_primary"
+                android:textColor="@color/coffeeshop_coffee_text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 tools:text="Cappuccino" />
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/coffee_primary"
+                android:textColor="@color/coffeeshop_coffee_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 tools:text="$3.50" />
@@ -72,17 +72,17 @@
                     android:minHeight="0dp"
                     android:padding="0dp"
                     android:text="-"
-                    android:textColor="@color/coffee_text_primary"
+                    android:textColor="@color/coffeeshop_coffee_text_primary"
                     android:textSize="18sp"
                     app:backgroundTint="@android:color/transparent"
-                    app:rippleColor="@color/coffee_primary_light" />
+                    app:rippleColor="@color/coffeeshop_coffee_primary_light" />
 
                 <TextView
                     android:id="@+id/quantity_text"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:gravity="center"
-                    android:textColor="@color/coffee_text_primary"
+                    android:textColor="@color/coffeeshop_coffee_text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     tools:text="2" />
@@ -98,10 +98,10 @@
                     android:minHeight="0dp"
                     android:padding="0dp"
                     android:text="+"
-                    android:textColor="@color/coffee_primary"
+                    android:textColor="@color/coffeeshop_coffee_primary"
                     android:textSize="18sp"
                     app:backgroundTint="@android:color/transparent"
-                    app:rippleColor="@color/coffee_primary_light" />
+                    app:rippleColor="@color/coffeeshop_coffee_primary_light" />
             </LinearLayout>
         </LinearLayout>
 
@@ -115,7 +115,7 @@
                 android:id="@+id/total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/coffee_text_primary"
+                android:textColor="@color/coffeeshop_coffee_text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"
@@ -127,12 +127,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/remove"
-                android:textColor="@color/red_500"
+                android:textColor="@color/coffeeshop_red_500"
                 android:textSize="12sp"
-                app:icon="@drawable/ic_remove"
+                app:icon="@drawable/coffeeshop_ic_remove"
                 app:iconGravity="textStart"
-                app:iconTint="@color/red_500"
-                app:rippleColor="@color/red_100" />
+                app:iconTint="@color/coffeeshop_red_500"
+                app:rippleColor="@color/coffeeshop_red_100" />
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -4,13 +4,39 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     
     <!-- Dialog dimensions -->
-    <dimen name="dialog_min_width">300dp</dimen>
+    <dimen name="coffeeshop_dialog_min_width">300dp</dimen>
+
+    <!-- Button dimensions -->
+    <dimen name="coffeeshop_button_corner_radius">8dp</dimen>
+    <dimen name="coffeeshop_button_min_height">48dp</dimen>
+    <dimen name="coffeeshop_button_padding_horizontal">24dp</dimen>
+    <dimen name="coffeeshop_button_text_padding_horizontal">12dp</dimen>
+    <dimen name="coffeeshop_button_stroke_width">1dp</dimen>
+
+    <!-- Card dimensions -->
+    <dimen name="coffeeshop_card_elevation">4dp</dimen>
+    <dimen name="coffeeshop_card_corner_radius">12dp</dimen>
+    <dimen name="coffeeshop_card_content_padding">16dp</dimen>
+    <dimen name="coffeeshop_card_max_elevation">8dp</dimen>
+    
+    <!-- FAB dimensions -->
+    <dimen name="coffeeshop_fab_elevation">6dp</dimen>
+    <dimen name="coffeeshop_fab_padding">12dp</dimen>
+    
+    <!-- Extended FAB dimensions -->
+    <dimen name="coffeeshop_extended_fab_elevation">6dp</dimen>
+    <dimen name="coffeeshop_extended_fab_padding_horizontal">24dp</dimen>
+    
+    <!-- Shape appearance dimensions -->
+    <dimen name="coffeeshop_shape_appearance_small">4dp</dimen>
+    <dimen name="coffeeshop_shape_appearance_medium">8dp</dimen>
+    <dimen name="coffeeshop_shape_appearance_large">12dp</dimen>
 
     <!-- Material 3 Extended FAB dimensions -->
-    <dimen name="mtrl_extended_fab_height">48dp</dimen>
-    <dimen name="mtrl_extended_fab_width">88dp</dimen>
-    <dimen name="mtrl_extended_fab_icon_size">24dp</dimen>
-    <dimen name="mtrl_extended_fab_icon_padding">8dp</dimen>
-    <dimen name="mtrl_extended_fab_text_padding">16dp</dimen>
-    <dimen name="mtrl_extended_fab_elevation">6dp</dimen>
+    <dimen name="coffeeshop_mtrl_extended_fab_height">48dp</dimen>
+    <dimen name="coffeeshop_mtrl_extended_fab_width">88dp</dimen>
+    <dimen name="coffeeshop_mtrl_extended_fab_icon_size">24dp</dimen>
+    <dimen name="coffeeshop_mtrl_extended_fab_icon_padding">8dp</dimen>
+    <dimen name="coffeeshop_mtrl_extended_fab_text_padding">16dp</dimen>
+    <dimen name="coffeeshop_mtrl_extended_fab_elevation">6dp</dimen>
 </resources>

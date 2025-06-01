@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@color/coffee_text_primary"
+        android:textColor="@color/coffeeshop_coffee_text_primary"
         android:textSize="14sp"
         tools:text="Cappuccino" />
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:textColor="@color/coffee_text_secondary"
+        android:textColor="@color/coffeeshop_coffee_text_secondary"
         android:textSize="14sp"
         tools:text="x2" />
 
@@ -28,7 +28,7 @@
         android:id="@+id/item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/coffee_text_primary"
+        android:textColor="@color/coffeeshop_coffee_text_primary"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:text="$7.00" />

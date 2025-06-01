@@ -1,54 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     tools:targetApi="31">
 
     <!-- Base application theme. -->
-    <style name="Theme.CoffeeShop" parent="Theme.Material3.DayNight">
+    <style name="Theme.CoffeeShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Force light theme -->
+        <item name="android:forceDarkAllowed">false</item>
+        <!-- Customize your theme here. -->
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/coffee_primary</item>
-        <item name="colorPrimaryVariant">@color/coffee_primary_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/coffee_secondary</item>
-        <item name="colorOnSecondary">@color/coffee_text_primary</item>
-        <item name="android:windowBackground">@color/coffee_surface</item>
-        <item name="android:windowMinWidthMajor">@dimen/dialog_min_width</item>
-        <item name="android:windowMinWidthMinor">@dimen/dialog_min_width</item>
+        <item name="colorPrimary">@color/coffeeshop_coffee_primary</item>
+        <item name="colorPrimaryContainer">@color/coffeeshop_coffee_primary_light</item>
+        <item name="colorOnPrimary">@color/coffeeshop_white</item>
+        <item name="colorOnPrimaryContainer">@color/coffeeshop_coffee_primary_dark</item>
         
-        <!-- Card View -->
-        <item name="cardElevation">4dp</item>
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardUseCompatPadding">true</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/coffeeshop_coffee_secondary</item>
+        <item name="colorSecondaryContainer">@color/coffeeshop_coffee_secondary_light</item>
+        <item name="colorOnSecondary">@color/coffeeshop_white</item>
+        <item name="colorOnSecondaryContainer">@color/coffeeshop_coffee_secondary_dark</item>
+        
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <!-- Navigation bar color. -->
+        <item name="android:navigationBarColor">@color/coffeeshop_coffee_surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/coffeeshop_coffee_background</item>
+        <item name="colorSurface">@color/coffeeshop_coffee_surface</item>
+        <item name="colorOnSurface">@color/coffeeshop_coffee_text_primary</item>
+        <item name="colorSurfaceVariant">@color/coffeeshop_coffee_surface</item>
+        <item name="colorOnSurfaceVariant">@color/coffeeshop_coffee_text_secondary</item>
         
         <!-- Text colors -->
-        <item name="android:textColorPrimary">@color/coffee_text_primary</item>
-        <item name="android:textColorSecondary">@color/coffee_text_secondary</item>
-        <item name="android:textColorHint">@color/coffee_text_hint</item>
-        
-        <!-- Navigation bar -->
-        <item name="android:navigationBarColor">@color/coffee_primary</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="android:textColorPrimary">@color/coffeeshop_coffee_text_primary</item>
+        <item name="android:textColorSecondary">@color/coffeeshop_coffee_text_secondary</item>
+        <item name="android:textColorTertiary">@color/coffeeshop_coffee_text_hint</item>
+        <item name="android:textColorHint">@color/coffeeshop_coffee_text_hint</item>
         
         <!-- Button styles -->
-        <item name="buttonBarPositiveButtonStyle">@style/Widget.CoffeeShop.Button.TextButton.Positive</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Widget.CoffeeShop.Button.TextButton.Negative</item>
-        <item name="buttonBarNeutralButtonStyle">@style/Widget.CoffeeShop.Button.TextButton</item>
+        <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+        
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MaterialComponents.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.MaterialComponents.LargeComponent</item>
     </style>
     
-    <!-- Light Theme -->
+    <!-- Light Theme (Day) -->
     <style name="Theme.CoffeeShop.Light" parent="Theme.CoffeeShop">
         <item name="isLightTheme">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
     
-    <!-- Dark Theme -->
+    <!-- Light NoActionBar Theme -->
+    <style name="Theme.CoffeeShop.Light.NoActionBar" parent="Theme.CoffeeShop.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <!-- Dark Theme (Night) -->
     <style name="Theme.CoffeeShop.Dark" parent="Theme.CoffeeShop">
         <item name="isLightTheme">false</item>
-        <item name="android:windowBackground">@color/coffee_primary_dark</item>
-        <item name="colorSurface">@color/coffee_primary_dark</item>
-        <item name="colorOnSurface">@color/white</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondary">@color/coffee_secondary_light</item>
-        <item name="cardBackgroundColor">@color/coffee_primary_light</item>
+        <item name="android:forceDarkAllowed">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorSurface">@color/coffeeshop_coffee_primary_dark</item>
+        <item name="colorOnSurface">@color/coffeeshop_white</item>
+        <item name="colorSurfaceVariant">@color/coffeeshop_coffee_primary_light</item>
+        <item name="colorOnSurfaceVariant">@color/coffeeshop_white</item>
     </style>
     
     <!-- No Action Bar Theme -->
@@ -64,28 +91,22 @@
     </style>
     
     <!-- Dialog Theme -->
-    <style name="Theme.CoffeeShop.Dialog" parent="Theme.Material3.DayNight.Dialog">
+    <style name="Theme.CoffeeShop.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
         <item name="dialogCornerRadius">16dp</item>
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
     
     <!-- Alert Dialog Theme -->
-    <style name="Theme.CoffeeShop.AlertDialog" parent="Theme.Material3.DayNight.Dialog">
+    <style name="Theme.CoffeeShop.AlertDialog" parent="Theme.MaterialComponents.DayNight.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowMinWidthMajor">@dimen/dialog_min_width</item>
-        <item name="android:windowMinWidthMinor">@dimen/dialog_min_width</item>
+        <item name="android:windowMinWidthMajor">@dimen/coffeeshop_dialog_min_width</item>
+        <item name="android:windowMinWidthMinor">@dimen/coffeeshop_dialog_min_width</item>
     </style>
     
     <!-- Bottom Sheet Theme -->
-    <style name="Theme.CoffeeShop.BottomSheetDialog" parent="Theme.Material3.DayNight.BottomSheetDialog">
+    <style name="Theme.CoffeeShop.BottomSheetDialog" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:statusBarColor">#61000000</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
-        <item name="android:windowSoftInputMode">stateUnchanged</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="bottomSheetStyle">@style/Widget.CoffeeShop.BottomSheet.Modal</item>
     </style>
 </resources>

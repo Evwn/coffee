@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ResourceName">
+        <ignore regexp="mtrl_.*"/>
+        <ignore regexp="nav_.*"/>
+        <ignore regexp="roboto.*"/>
+        <ignore regexp=".*Material3.*"/>
+    </issue>
+</lint>

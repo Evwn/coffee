@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="@color/coffee_primary"
+    android:background="@color/coffeeshop_coffee_primary"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
@@ -15,7 +15,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:contentDescription="@string/profile_picture"
-        android:src="@drawable/ic_profile"
+        android:src="@drawable/coffeeshop_ic_profile"
         android:layout_marginBottom="8dp"
         app:civ_border_color="@android:color/white"
         app:civ_border_width="2dp" />
@@ -34,7 +34,7 @@
         android:id="@+id/email_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/coffee_primary_light"
+        android:textColor="@color/coffeeshop_coffee_primary_light"
         android:textSize="14sp"
         tools:text="john.doe@example.com" />
 

@@ -32,7 +32,7 @@
                     android:id="@+id/order_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/coffee_text_primary"
+                    android:textColor="@color/coffeeshop_coffee_text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     tools:text="#123456" />
@@ -42,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:textColor="@color/coffee_text_secondary"
+                    android:textColor="@color/coffeeshop_coffee_text_secondary"
                     android:textSize="12sp"
                     tools:text="May 28, 2023 10:30 AM" />
             </LinearLayout>
@@ -57,7 +57,7 @@
                     android:id="@+id/total_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/coffee_text_primary"
+                    android:textColor="@color/coffeeshop_coffee_text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     tools:text="$15.50" />
@@ -70,7 +70,7 @@
                     android:background="@drawable/coffeeshop_bg_status"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="2dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/coffeeshop_white"
                     android:textSize="12sp"
                     android:textAllCaps="true"
                     tools:text="Completed" />
@@ -88,7 +88,7 @@
                 android:id="@+id/item_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/coffee_text_secondary"
+                android:textColor="@color/coffeeshop_coffee_text_secondary"
                 android:textSize="14sp"
                 tools:text="3 items" />
 
@@ -101,9 +101,9 @@
                 android:id="@+id/expand_icon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_expand_more"
+                android:src="@drawable/coffeeshop_ic_expand_more"
                 android:contentDescription="@string/expand"
-                app:tint="@color/coffee_text_secondary" />
+                app:tint="@color/coffeeshop_coffee_text_secondary" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
-                android:background="@color/coffee_divider" />
+                android:background="@color/coffeeshop_coffee_divider" />
 
             <LinearLayout
                 android:id="@+id/order_items_layout"
@@ -134,8 +134,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/reorder"
-                android:textColor="@color/coffee_primary"
-                app:strokeColor="@color/coffee_primary"
+                android:textColor="@color/coffeeshop_coffee_primary"
+                app:strokeColor="@color/coffeeshop_coffee_primary"
                 app:strokeWidth="1dp" />
         </LinearLayout>
     </LinearLayout>

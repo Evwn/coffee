@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/coffee_background"
+    android:background="@color/coffeeshop_coffee_background"
     tools:ignore="ResourceName">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,11 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/transparent"
-            app:navigationIcon="@drawable/ic_arrow_back"
-            app:navigationIconTint="@color/coffee_primary"
+            app:navigationIcon="@drawable/coffeeshop_ic_arrow_back"
+            app:navigationIconTint="@color/coffeeshop_coffee_primary"
             app:title="@string/my_cart"
             app:titleTextAppearance="@style/TextAppearance.CoffeeShop.Headline6"
-            app:titleTextColor="@color/coffee_text_primary" />
+            app:titleTextColor="@color/coffeeshop_coffee_text_primary" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -53,7 +53,7 @@
                 android:padding="32dp"
                 android:text="@string/empty_cart_message"
                 android:textAlignment="center"
-                android:textColor="@color/coffee_text_secondary"
+                android:textColor="@color/coffeeshop_coffee_text_secondary"
                 android:textSize="16sp"
                 android:visibility="gone" />
         </LinearLayout>
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/total"
-                android:textColor="@color/coffee_text_primary"
+                android:textColor="@color/coffeeshop_coffee_text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$0.00"
-                android:textColor="@color/coffee_primary"
+                android:textColor="@color/coffeeshop_coffee_primary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -102,13 +102,13 @@
             android:paddingVertical="12dp"
             android:text="@string/purchase"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/coffeeshop_white"
             android:textSize="16sp"
-            app:backgroundTint="@color/coffee_primary"
+            app:backgroundTint="@color/coffeeshop_coffee_primary"
             app:cornerRadius="8dp"
-            app:icon="@drawable/ic_purchase"
+            app:icon="@drawable/coffeeshop_ic_purchase"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
-            app:iconTint="@color/white" />
+            app:iconTint="@color/coffeeshop_white" />
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -43,53 +43,89 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        android.util.Log.d("HomeFragment", "onCreateView: Starting...");
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         
-        // Initialize ViewModel
-        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        
-        // Initialize SearchBar
-        searchBar = view.findViewById(R.id.search_bar);
-        TextInputEditText searchEditText = (TextInputEditText) searchBar.getEditText();
-        if (searchEditText != null) {
-            searchEditText.setOnClickListener(v -> {
-                // Handle search bar click
-                Toast.makeText(requireContext(), "Search clicked", Toast.LENGTH_SHORT).show();
-            });
-        }
-        
-        // Initialize RecyclerView
-        recyclerView = view.findViewById(R.id.coffee_recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        
-        // Initialize FAB
-        FloatingActionButton fabCart = view.findViewById(R.id.fab_cart);
-        fabCart.setOnClickListener(v -> {
-            // Navigate to cart
-            if (navController != null) {
-                navController.navigate(R.id.navigation_cart);
+        try {
+            // Initialize ViewModel
+            sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+            android.util.Log.d("HomeFragment", "ViewModel initialized");
+            
+            // Initialize SearchBar
+            searchBar = view.findViewById(R.id.search_bar);
+            if (searchBar != null) {
+                TextInputEditText searchEditText = (TextInputEditText) searchBar.getEditText();
+                if (searchEditText != null) {
+                    searchEditText.setOnClickListener(v -> {
+                        // Handle search bar click
+                        Toast.makeText(requireContext(), "Search clicked", Toast.LENGTH_SHORT).show();
+                    });
+                    android.util.Log.d("HomeFragment", "Search bar initialized");
+                } else {
+                    android.util.Log.e("HomeFragment", "Search EditText not found");
+                }
+            } else {
+                android.util.Log.e("HomeFragment", "SearchBar not found in layout");
             }
-        });
-        
-        // Initialize coffee items
-        initializeCoffeeItems();
-        
-        // Set up adapter
-        adapter = new CoffeeAdapter(coffeeItems, new CoffeeAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(CoffeeItem item) {
-                // Handle item click (e.g., show details)
-                Toast.makeText(getContext(), "Selected: " + item.getName(), Toast.LENGTH_SHORT).show();
+            
+            // Initialize RecyclerView
+            recyclerView = view.findViewById(R.id.coffee_recycler_view);
+            if (recyclerView != null) {
+                recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                android.util.Log.d("HomeFragment", "RecyclerView initialized");
+            } else {
+                android.util.Log.e("HomeFragment", "RecyclerView not found in layout");
             }
+            
+            // Initialize FAB
+            FloatingActionButton fabCart = view.findViewById(R.id.fab_cart);
+            if (fabCart != null) {
+                fabCart.setOnClickListener(v -> {
+                    // Navigate to cart
+                    if (navController != null) {
+                        navController.navigate(R.id.navigation_cart);
+                    } else {
+                        android.util.Log.e("HomeFragment", "NavController is null, cannot navigate to cart");
+                    }
+                });
+                android.util.Log.d("HomeFragment", "FAB initialized");
+            } else {
+                android.util.Log.e("HomeFragment", "FAB not found in layout");
+            }
+            
+            // Initialize coffee items
+            initializeCoffeeItems();
+            
+            // Set up adapter
+            adapter = new CoffeeAdapter(coffeeItems, new CoffeeAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(CoffeeItem item) {
+                    // Handle item click (e.g., show details)
+                    Toast.makeText(getContext(), "Selected: " + item.getName(), Toast.LENGTH_SHORT).show();
+                }
 
-            @Override
-            public void onAddToCartClick(CoffeeItem item) {
-                // Add item to cart via ViewModel
-                sharedViewModel.addToCart(item);
-                Toast.makeText(getContext(), "Added to cart: " + item.getName(), Toast.LENGTH_SHORT).show();
+                @Override
+                public void onAddToCartClick(CoffeeItem item) {
+                    // Add item to cart via ViewModel
+                    if (sharedViewModel != null) {
+                        sharedViewModel.addToCart(item);
+                        Toast.makeText(getContext(), "Added to cart: " + item.getName(), Toast.LENGTH_SHORT).show();
+                    } else {
+                        android.util.Log.e("HomeFragment", "SharedViewModel is null, cannot add item to cart");
+                    }
+                }
+            });
+            
+            if (recyclerView != null && adapter != null) {
+                recyclerView.setAdapter(adapter);
+                android.util.Log.d("HomeFragment", "Adapter set on RecyclerView");
+            } else {
+                android.util.Log.e("HomeFragment", "Cannot set adapter - RecyclerView or Adapter is null");
             }
-        });
-        recyclerView.setAdapter(adapter);
+            
+        } catch (Exception e) {
+            android.util.Log.e("HomeFragment", "Error in onCreateView", e);
+        }
         
         return view;
     }

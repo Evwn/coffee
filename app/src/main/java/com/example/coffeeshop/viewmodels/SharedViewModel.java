@@ -1,5 +1,7 @@
 package com.example.coffeeshop.viewmodels;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -65,39 +67,52 @@ public class SharedViewModel extends ViewModel {
     }
     
     private void startOrderStatusUpdates(String orderId) {
-        // First update after 2 minutes to "Confirmed"
+        // First update after 30 seconds to "Confirmed"
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
                 updateOrderStatus(orderId, "Confirmed");
                 
-                // Schedule the final update to "Completed" after 2 more minutes
+                // Schedule the final update to "Completed" after 30 more seconds
                 new Timer().schedule(new TimerTask() {
                     @Override
                     public void run() {
                         updateOrderStatus(orderId, "Completed");
                     }
-                }, TimeUnit.MINUTES.toMillis(2));
+                }, TimeUnit.SECONDS.toMillis(30));
             }
-        }, TimeUnit.MINUTES.toMillis(2));
+        }, TimeUnit.SECONDS.toMillis(30));
     }
     
     private void updateOrderStatus(String orderId, String newStatus) {
         List<Order> currentOrders = orders.getValue();
         if (currentOrders == null) return;
         
+        // Create a new list to trigger LiveData update
         List<Order> updatedOrders = new ArrayList<>();
         boolean updated = false;
         
         for (Order order : currentOrders) {
+            // Create a new Order object if status needs to be updated
             if (order.getOrderId().equals(orderId)) {
-                order.setStatus(newStatus);
+                Order updatedOrder = new Order(
+                    order.getOrderId(),
+                    order.getOrderDate(),
+                    order.getItems(),
+                    order.getTotalAmount(),
+                    newStatus
+                );
+                updatedOrder.setExpanded(order.isExpanded());
+                updatedOrders.add(updatedOrder);
                 updated = true;
+                Log.d("SharedViewModel", "Updating order status: " + orderId + " to " + newStatus);
+            } else {
+                updatedOrders.add(order);
             }
-            updatedOrders.add(order);
         }
         
         if (updated) {
+            // Post the new list to trigger observers
             orders.postValue(updatedOrders);
         }
     }
@@ -115,6 +130,10 @@ public class SharedViewModel extends ViewModel {
     }
 
     public void addToCart(CoffeeItem coffeeItem) {
+        addToCart(coffeeItem, 1);
+    }
+    
+    public void addToCart(CoffeeItem coffeeItem, int quantity) {
         List<CartItem> currentItems = cartItems.getValue();
         if (currentItems == null) {
             currentItems = new ArrayList<>();
@@ -123,16 +142,25 @@ public class SharedViewModel extends ViewModel {
         boolean itemExists = false;
         for (CartItem item : currentItems) {
             if (item.getCoffeeItem().getName().equals(coffeeItem.getName())) {
-                item.setQuantity(item.getQuantity() + 1);
+                item.setQuantity(item.getQuantity() + quantity);
                 itemExists = true;
                 break;
             }
         }
 
         if (!itemExists) {
-            currentItems.add(new CartItem(coffeeItem, 1));
+            currentItems.add(new CartItem(coffeeItem, quantity));
         }
 
+        updateCart(currentItems);
+    }
+    
+    public void addToCart(CartItem cartItem) {
+        List<CartItem> currentItems = cartItems.getValue();
+        if (currentItems == null) {
+            currentItems = new ArrayList<>();
+        }
+        currentItems.add(new CartItem(cartItem.getCoffeeItem(), cartItem.getQuantity()));
         updateCart(currentItems);
     }
 
